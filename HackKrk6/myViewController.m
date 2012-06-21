@@ -14,14 +14,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *password;
 
-@property (strong, nonatomic) Networking *model;
-
 @end
 
 @implementation myViewController
 @synthesize userName = _userName;
 @synthesize password = _password;
-@synthesize model = _model;
 
 - (void)didReceiveMemoryWarning
 {
