@@ -28,6 +28,7 @@
 		06A735D6159395C8001D42B4 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735D5159395C8001D42B4 /* Networking.m */; };
 		06A735E61593A465001D42B4 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735E51593A465001D42B4 /* NSString+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A132F8F615939412000D87A3 /* myViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A132F8F515939412000D87A3 /* myViewController.m */; };
+		A17A33401593B546001D0E5D /* leaderbords.m in Sources */ = {isa = PBXBuildFile; fileRef = A17A333F1593B546001D0E5D /* leaderbords.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,8 @@
 		06A735E51593A465001D42B4 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
 		A132F8F415939412000D87A3 /* myViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myViewController.h; sourceTree = "<group>"; };
 		A132F8F515939412000D87A3 /* myViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myViewController.m; sourceTree = "<group>"; };
+		A17A333E1593B546001D0E5D /* leaderbords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leaderbords.h; sourceTree = "<group>"; };
+		A17A333F1593B546001D0E5D /* leaderbords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leaderbords.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				06A735A4159389A6001D42B4 /* HackKRKViewController.m */,
 				A132F8F415939412000D87A3 /* myViewController.h */,
 				A132F8F515939412000D87A3 /* myViewController.m */,
+				A17A333E1593B546001D0E5D /* leaderbords.h */,
+				A17A333F1593B546001D0E5D /* leaderbords.m */,
 				06A73595159389A6001D42B4 /* Supporting Files */,
 			);
 			path = HackKrk6;
@@ -260,6 +265,7 @@
 				A132F8F615939412000D87A3 /* myViewController.m in Sources */,
 				06A735D6159395C8001D42B4 /* Networking.m in Sources */,
 				06A735E61593A465001D42B4 /* NSString+Base64.m in Sources */,
+				A17A33401593B546001D0E5D /* leaderbords.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
