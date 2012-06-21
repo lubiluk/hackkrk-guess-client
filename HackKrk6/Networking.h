@@ -19,4 +19,8 @@
 
 - (void)uploadRiddleWithQuestion:(NSString *)question answer:(NSString *)answer photo:(UIImage *)photo;
 
+- (void)sendListOfRiddleRequestWithPageNumber:(NSNumber *)pageNumber itemsPerPage:(NSNumber *)itemsPerPage withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result;
+
+- (void)postRiddleAnswer:(NSString *)answer token:(NSString *)token withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result;
+
 @end
