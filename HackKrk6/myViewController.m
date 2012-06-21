@@ -14,14 +14,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *password;
 
-@property (strong, nonatomic) Networking *model;
-
 @end
 
 @implementation myViewController
 @synthesize userName = _userName;
 @synthesize password = _password;
-@synthesize model = _model;
 
 - (void)didReceiveMemoryWarning
 {
@@ -72,6 +69,9 @@
         if (!result) {
         UIAlertView *mistake = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Something went wrong, please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
             [mistake show];
+        }
+        else {
+            [self performSegueWithIdentifier:@"sucessfulLogIn" sender:self];
         }
     }];
 }
