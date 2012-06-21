@@ -17,10 +17,12 @@
 
 - (void)sendLoginRequestWithUsername:(NSString *)username password:(NSString *)password withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result;
 
-- (void)uploadRiddleWithQuestion:(NSString *)question answer:(NSString *)answer photo:(UIImage *)photo;
+- (void)uploadRiddleWithQuestion:(NSString *)question answer:(NSString *)answer token:(NSString *)token photo:(UIImage *)photo withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result;
 
-- (void)sendListOfRiddleRequestWithPageNumber:(NSNumber *)pageNumber itemsPerPage:(NSNumber *)itemsPerPage withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result;
+- (void)sendListOfRiddleRequestWithPageNumber:(NSNumber *)pageNumber itemsPerPage:(NSNumber *)itemsPerPage token:(NSString *)token withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result;
 
-- (void)postRiddleAnswer:(NSString *)answer token:(NSString *)token withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result;
+- (void)postRiddleAnswer:(NSString *)answer riddleID:(NSNumber *)riddleID token:(NSString *)token withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result;
+
+- (void)leaderboardListWithPageNumber:(NSNumber *)pageNumber itemsPerPage:(NSNumber *)itemsPerPage token:(NSString *)token withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result;
 
 @end
