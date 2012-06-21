@@ -27,6 +27,7 @@
 		06A735CA15938AB9001D42B4 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735C015938AB9001D42B4 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06A735D6159395C8001D42B4 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735D5159395C8001D42B4 /* Networking.m */; };
 		A132F8F615939412000D87A3 /* myViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A132F8F515939412000D87A3 /* myViewController.m */; };
+		AC249CAF159398C0004A437E /* questionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC249CAE159398C0004A437E /* questionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,8 @@
 		06A735D5159395C8001D42B4 /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
 		A132F8F415939412000D87A3 /* myViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myViewController.h; sourceTree = "<group>"; };
 		A132F8F515939412000D87A3 /* myViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myViewController.m; sourceTree = "<group>"; };
+		AC249CAD159398C0004A437E /* questionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = questionViewController.h; path = ../questionViewController.h; sourceTree = "<group>"; };
+		AC249CAE159398C0004A437E /* questionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = questionViewController.m; path = ../questionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				06A735A4159389A6001D42B4 /* HackKRKViewController.m */,
 				A132F8F415939412000D87A3 /* myViewController.h */,
 				A132F8F515939412000D87A3 /* myViewController.m */,
+				AC249CAD159398C0004A437E /* questionViewController.h */,
+				AC249CAE159398C0004A437E /* questionViewController.m */,
 				06A73595159389A6001D42B4 /* Supporting Files */,
 			);
 			path = HackKrk6;
@@ -246,6 +251,7 @@
 				06A735CA15938AB9001D42B4 /* UIImageView+AFNetworking.m in Sources */,
 				A132F8F615939412000D87A3 /* myViewController.m in Sources */,
 				06A735D6159395C8001D42B4 /* Networking.m in Sources */,
+				AC249CAF159398C0004A437E /* questionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
