@@ -11,10 +11,12 @@
 
 @interface Networking ()
 @property (nonatomic,strong) NSOperationQueue *httpQueue;
+@property (nonatomic,strong) NSURL *url;
 @end
 
 @implementation Networking
 @synthesize httpQueue = _httpQueue;
+@synthesize url = _url;
 
 + (Networking *)sharedNetworking
 {
@@ -24,11 +26,18 @@
     return instanceOfNetworking;
 }
 
+- (id)init
+{
+    if (self = [super init]) {
+        self.url = [NSURL URLWithString:@"http://hackkrk-guess-static.herokuapp.com"];
+    }
+    return self;
+}
+
 
 - (void)sendRegisterRequestWithUsername:(NSString *)username password:(NSString *)password withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result
 {
-    NSURL *url = [NSURL URLWithString:@"http://hackkrk-guess-static.herokuapp.com"];
-    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:self.url];
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
                             username, @"username",
@@ -49,8 +58,7 @@
 
 - (void)sendLoginRequestWithUsername:(NSString *)username password:(NSString *)password withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result
 {
-    NSURL *url = [NSURL URLWithString:@"http://hackkrk-guess-static.herokuapp.com"];
-    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:self.url];
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
                             username, @"username",
@@ -76,9 +84,7 @@
     
     NSString *base64Image = [NSString encodeBase64WithData:dataForJPEGFile];
     
-    
-    NSURL *url = [NSURL URLWithString:@"http://hackkrk-guess-static.herokuapp.com"];
-    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:self.url];
     [httpClient setDefaultHeader:@"X-Auth-Token" value:token];
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -100,8 +106,7 @@
 
 - (void)sendListOfRiddleRequestWithPageNumber:(NSNumber *)pageNumber itemsPerPage:(NSNumber *)itemsPerPage token:(NSString *)token withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result
 {
-    NSURL *url = [NSURL URLWithString:@"http://hackkrk-guess-static.herokuapp.com"];
-    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:self.url];
     [httpClient setDefaultHeader:@"X-Auth-Token" value:token];
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -124,8 +129,7 @@
 
 - (void)postRiddleAnswer:(NSString *)answer riddleID:(NSNumber *)riddleID token:(NSString *)token withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result
 {
-    NSURL *url = [NSURL URLWithString:@"http://hackkrk-guess-static.herokuapp.com"];
-    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:self.url];
     [httpClient setDefaultHeader:@"X-Auth-Token" value:token];
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -142,5 +146,30 @@
     
     [self.httpQueue addOperation:json];
 }
+
+- (void)leaderboardListWithPageNumber:(NSNumber *)pageNumber itemsPerPage:(NSNumber *)itemsPerPage token:(NSString *)token withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result
+{
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:self.url];
+    [httpClient setDefaultHeader:@"X-Auth-Token" value:token];
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            pageNumber, @"page",
+                            itemsPerPage, @"per_page",
+                            nil];
+    
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET" path:@"/leaderboard" parameters:params];
+    
+    
+    
+    AFJSONRequestOperation *json = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        result(YES,nil,JSON);
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        result(NO,error,JSON);
+    }];
+    
+    [self.httpQueue addOperation:json];
+}
+
+
 
 @end

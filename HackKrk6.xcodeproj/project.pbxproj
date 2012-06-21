@@ -27,6 +27,7 @@
 		06A735CA15938AB9001D42B4 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735C015938AB9001D42B4 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06A735D6159395C8001D42B4 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735D5159395C8001D42B4 /* Networking.m */; };
 		06A735E61593A465001D42B4 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735E51593A465001D42B4 /* NSString+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06A735EB1593B693001D42B4 /* UserAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735EA1593B693001D42B4 /* UserAuthentication.m */; };
 		A132F8F615939412000D87A3 /* myViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A132F8F515939412000D87A3 /* myViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		06A735D5159395C8001D42B4 /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
 		06A735E41593A465001D42B4 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
 		06A735E51593A465001D42B4 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		06A735E91593B693001D42B4 /* UserAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAuthentication.h; sourceTree = "<group>"; };
+		06A735EA1593B693001D42B4 /* UserAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAuthentication.m; sourceTree = "<group>"; };
 		A132F8F415939412000D87A3 /* myViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myViewController.h; sourceTree = "<group>"; };
 		A132F8F515939412000D87A3 /* myViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +180,8 @@
 			children = (
 				06A735D4159395C8001D42B4 /* Networking.h */,
 				06A735D5159395C8001D42B4 /* Networking.m */,
+				06A735E91593B693001D42B4 /* UserAuthentication.h */,
+				06A735EA1593B693001D42B4 /* UserAuthentication.m */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 				A132F8F615939412000D87A3 /* myViewController.m in Sources */,
 				06A735D6159395C8001D42B4 /* Networking.m in Sources */,
 				06A735E61593A465001D42B4 /* NSString+Base64.m in Sources */,
+				06A735EB1593B693001D42B4 /* UserAuthentication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
