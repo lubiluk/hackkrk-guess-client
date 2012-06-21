@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface questionViewController : UIViewController
+@interface questionViewController : UIViewController {
+    
+}
+
+@property (nonatomic, retain) IBOutlet UIImageView *imageView;
+@property (nonatomic, retain) IBOutlet UILabel *questionLabel;
+@property (nonatomic, retain) IBOutlet UITextField *answerField;
+@property (nonatomic, retain) IBOutlet UIButton *submitButton;
+
+-(IBAction)submit:(id)sender;
 
 @end

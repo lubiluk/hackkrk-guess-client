@@ -10,6 +10,11 @@
 
 @implementation questionViewController
 
+@synthesize imageView;
+@synthesize questionLabel;
+@synthesize answerField;
+@synthesize submitButton;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -43,6 +48,10 @@
     [super viewDidLoad];
 }
 */
+
+- (IBAction)submit:(id)sender{
+    
+}
 
 - (void)viewDidUnload
 {

@@ -120,7 +120,7 @@
         <scene sceneID="Ea0-bw-Tev">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dQ-xB-1Xi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="60d-Jg-ms7" sceneMemberID="viewController">
+                <viewController id="60d-Jg-ms7" customClass="questionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WSY-i6-iZd">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -136,6 +136,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="submit:" destination="60d-Jg-ms7" eventType="touchUpInside" id="itU-vu-2Vf"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your answer" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" id="djT-9O-Ugi">
                                 <rect key="frame" x="40" y="364" width="240" height="31"/>
@@ -157,7 +160,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+<<<<<<< HEAD
                     <navigationItem key="navigationItem" id="GtA-Qc-6qb"/>
+=======
+                    <connections>
+                        <outlet property="answerField" destination="djT-9O-Ugi" id="2Pt-9A-M0Z"/>
+                        <outlet property="imageView" destination="vnv-WY-Eba" id="4qM-MC-1UC"/>
+                        <outlet property="questionLabel" destination="DNK-00-e8d" id="7sV-aE-zOp"/>
+                        <outlet property="submitButton" destination="0LG-Ut-bL8" id="ejn-Cd-kOZ"/>
+                    </connections>
+>>>>>>> connections beteween class and viewcontroller
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1661" y="-30"/>
@@ -180,6 +192,28 @@
             <point key="canvasLocation" x="143" y="29"/>
         </scene>
     </scenes>
+<<<<<<< HEAD
+=======
+    <classes>
+        <class className="myViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/myViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="userName" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="questionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/questionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="submit:"/>
+                <relationship kind="outlet" name="answerField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="questionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="submitButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
+>>>>>>> connections beteween class and viewcontroller
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
