@@ -7,13 +7,14 @@
 //
 
 #import "myViewController.h"
+#import "Networking.h"
 
 @interface myViewController()
 
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *password;
 
-@property (strong, nonatomic) ios6ViewController *model;
+@property (strong, nonatomic) Networking *model;
 
 @end
 
@@ -67,10 +68,10 @@
 
 - (IBAction)tryToLogIn:(id)sender 
 {
-    [self.model sendRegisterWithUsername:self.userName.text password:self.password.text RequestWithCallBack:^(BOOL result, NSError *error, id JASON)
-    {
-        if (error) {
-            
+    [Networking sendRegisterRequestWithUsername:self.userName.text password:self.password.text withCallBack:^(BOOL result, NSError *error, id JSON) {
+        if (!result) {
+        UIAlertView *mistake = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Something went wrong, please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [mistake show];
         }
     }];
 }
