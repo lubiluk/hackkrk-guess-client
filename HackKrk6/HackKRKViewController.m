@@ -18,7 +18,7 @@
 
 
 
-- (void)sendRegisterWithUsername:(NSString *)username password:(NSString *)password requestWithCallBack:(void (^)(BOOL result, NSError *error, id JSON))result
+- (void)sendRegisteRrequestWithUsername:(NSString *)username password:(NSString *)password withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result
 {
     NSURL *url = [NSURL URLWithString:@"http://hackkrk-guess-static.herokuapp.com"];
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
@@ -47,7 +47,7 @@
 {
     [super viewDidLoad];
     
-    [self sendRegisterWithUsername:@"mientus" password:@"hackkrk" requestWithCallBack:^(BOOL result, NSError *error, id JSON) {
+    [self sendRegisteRrequestWithUsername:@"mientus" password:@"hackkrk" withCallBack:^(BOOL result, NSError *error, id JSON) {
         NSLog(@"%@",JSON); 
     }];
 // Do any additional setup after loading the view, typically from a nib.

@@ -36,10 +36,10 @@
 		06A73598159389A6001D42B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		06A7359A159389A6001D42B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06A7359C159389A6001D42B4 /* HackKrk6-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HackKrk6-Prefix.pch"; sourceTree = "<group>"; };
-		06A7359D159389A6001D42B4 /* HackKRKAppDelegate.h */ = {isa = PBXFileReference; path = HackKRKAppDelegate.h; sourceTree = "<group>"; };
+		06A7359D159389A6001D42B4 /* HackKRKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HackKRKAppDelegate.h; sourceTree = "<group>"; };
 		06A7359E159389A6001D42B4 /* HackKRKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HackKRKAppDelegate.m; sourceTree = "<group>"; };
 		06A735A1159389A6001D42B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		06A735A3159389A6001D42B4 /* HackKRKViewController.h */ = {isa = PBXFileReference; path = HackKRKViewController.h; sourceTree = "<group>"; };
+		06A735A3159389A6001D42B4 /* HackKRKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HackKRKViewController.h; sourceTree = "<group>"; };
 		06A735A4159389A6001D42B4 /* HackKRKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HackKRKViewController.m; sourceTree = "<group>"; };
 		06A735AC15938AB9001D42B4 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		06A735AD15938AB9001D42B4 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
@@ -108,7 +108,6 @@
 		06A73594159389A6001D42B4 /* HackKrk6 */ = {
 			isa = PBXGroup;
 			children = (
-				06A735AB15938AB9001D42B4 /* AFNetworking */,
 				06A7359D159389A6001D42B4 /* HackKRKAppDelegate.h */,
 				06A7359E159389A6001D42B4 /* HackKRKAppDelegate.m */,
 				06A735A0159389A6001D42B4 /* MainStoryboard.storyboard */,
@@ -122,6 +121,7 @@
 		06A73595159389A6001D42B4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				06A735AB15938AB9001D42B4 /* AFNetworking */,
 				06A73596159389A6001D42B4 /* HackKrk6-Info.plist */,
 				06A73597159389A6001D42B4 /* InfoPlist.strings */,
 				06A7359A159389A6001D42B4 /* main.m */,
@@ -345,6 +345,7 @@
 				06A735AA159389A6001D42B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
