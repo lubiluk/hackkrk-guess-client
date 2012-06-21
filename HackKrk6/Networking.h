@@ -17,4 +17,6 @@
 
 - (void)sendLoginRequestWithUsername:(NSString *)username password:(NSString *)password withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result;
 
+- (void)uploadRiddleWithQuestion:(NSString *)question answer:(NSString *)answer photo:(UIImage *)photo;
+
 @end

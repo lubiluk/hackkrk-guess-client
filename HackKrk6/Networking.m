@@ -68,4 +68,17 @@
     [self.httpQueue addOperation:json];
 }
 
+- (void)uploadRiddleWithQuestion:(NSString *)question answer:(NSString *)answer photo:(UIImage *)photo
+{
+    NSURL *url = [NSURL URLWithString:@"http://hackkrk-guess-static.herokuapp.com"];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            question, @"question",
+                            answer, @"answer",
+                            nil];
+    
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET" path:@"/user" parameters:params];
+}
+
 @end
