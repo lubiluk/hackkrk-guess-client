@@ -10,7 +10,7 @@
 
 @implementation Networking
 
-- (void)sendRegisterRequestWithUsername:(NSString *)username password:(NSString *)password withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result
++ (void)sendRegisterRequestWithUsername:(NSString *)username password:(NSString *)password withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result
 {
     NSURL *url = [NSURL URLWithString:@"http://hackkrk-guess-static.herokuapp.com"];
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
