@@ -70,6 +70,9 @@
         UIAlertView *mistake = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Something went wrong, please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
             [mistake show];
         }
+        else {
+            [self performSegueWithIdentifier:@"sucessfulLogIn" sender:self];
+        }
     }];
 }
 
