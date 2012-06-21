@@ -68,7 +68,7 @@
 
 - (IBAction)tryToLogIn:(id)sender 
 {
-    [Networking sendRegisterRequestWithUsername:self.userName.text password:self.password.text withCallBack:^(BOOL result, NSError *error, id JSON) {
+    [[Networking sharedNetworking] sendRegisterRequestWithUsername:self.userName.text password:self.password.text withCallBack:^(BOOL result, NSError *error, id JSON) {
         if (!result) {
         UIAlertView *mistake = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Something went wrong, please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
             [mistake show];
