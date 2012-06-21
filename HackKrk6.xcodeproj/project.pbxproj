@@ -25,6 +25,7 @@
 		06A735C815938AB9001D42B4 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735BC15938AB9001D42B4 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06A735C915938AB9001D42B4 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735BE15938AB9001D42B4 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06A735CA15938AB9001D42B4 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735C015938AB9001D42B4 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A132F8F615939412000D87A3 /* myViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A132F8F515939412000D87A3 /* myViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		06A735BE15938AB9001D42B4 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		06A735BF15938AB9001D42B4 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		06A735C015938AB9001D42B4 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		A132F8F415939412000D87A3 /* myViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myViewController.h; sourceTree = "<group>"; };
+		A132F8F515939412000D87A3 /* myViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				06A735A0159389A6001D42B4 /* MainStoryboard.storyboard */,
 				06A735A3159389A6001D42B4 /* HackKRKViewController.h */,
 				06A735A4159389A6001D42B4 /* HackKRKViewController.m */,
+				A132F8F415939412000D87A3 /* myViewController.h */,
+				A132F8F515939412000D87A3 /* myViewController.m */,
 				06A73595159389A6001D42B4 /* Supporting Files */,
 			);
 			path = HackKrk6;
@@ -234,6 +239,7 @@
 				06A735C815938AB9001D42B4 /* AFURLConnectionOperation.m in Sources */,
 				06A735C915938AB9001D42B4 /* AFXMLRequestOperation.m in Sources */,
 				06A735CA15938AB9001D42B4 /* UIImageView+AFNetworking.m in Sources */,
+				A132F8F615939412000D87A3 /* myViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
