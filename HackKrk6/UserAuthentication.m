@@ -11,6 +11,7 @@
 @implementation UserAuthentication
 @synthesize username = _username;
 @synthesize token = _token;
+@synthesize score;
 
 + (UserAuthentication *)sharedAuthentication
 {

@@ -7,9 +7,16 @@
 //
 
 #import "leaderbords.h"
+#import "Networking.h"
+#import "UserAuthentication.h"
+
+@interface leaderbords ()
+@property (nonatomic,strong) NSArray *listOfElements;
+@end
 
 
 @implementation leaderbords
+@synthesize listOfElements = _listOfElements;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,6 +40,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[Networking sharedNetworking] leaderboardListWithPageNumber:[NSNumber numberWithInt:2] itemsPerPage:[NSNumber numberWithInt:20] token:[UserAuthentication sharedAuthentication].token withCallBack:^(BOOL result, NSError *error, id JSON){
+        self.listOfElements = [JSON objectForKey:@"users"];
+        NSLog(@"%@",self.listOfElements);
+        [self.tableView reloadData];
+    }];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -78,16 +91,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.listOfElements count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -98,6 +109,9 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    
+    cell.textLabel.text = [[self.listOfElements objectAtIndex:indexPath.row] objectForKey:@"name"];
+    cell.detailTextLabel.text = [[self.listOfElements objectAtIndex:indexPath.row] objectForKey:@"score"];
     
     // Configure the cell...
     

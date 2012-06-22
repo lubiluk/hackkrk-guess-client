@@ -8,6 +8,7 @@
 
 #import "myViewController.h"
 #import "Networking.h"
+#import "UserAuthentication.h"
 
 @interface myViewController()
 
@@ -68,12 +69,17 @@
 
 - (IBAction)tryToLogIn:(id)sender 
 {
+    
     [[Networking sharedNetworking] sendRegisterRequestWithUsername:self.userName.text password:self.password.text withCallBack:^(BOOL result, NSError *error, id JSON) {
         if (!result) {
-        UIAlertView *mistake = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Something went wrong, please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView *mistake = [[UIAlertView alloc] initWithTitle:@"Error" message:[error description] delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
             [mistake show];
+            NSLog(@"%@",JSON);
         }
         else {
+            [UserAuthentication sharedAuthentication].token = [JSON objectForKey:@"token"];
+            [UserAuthentication sharedAuthentication].username = [JSON objectForKey:@"username"];
+            NSLog(@"%@",JSON);
             [self performSegueWithIdentifier:@"logInAttempt" sender:self];
         }
     }];

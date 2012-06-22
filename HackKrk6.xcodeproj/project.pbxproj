@@ -25,10 +25,14 @@
 		06A735C815938AB9001D42B4 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735BC15938AB9001D42B4 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06A735C915938AB9001D42B4 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735BE15938AB9001D42B4 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06A735CA15938AB9001D42B4 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735C015938AB9001D42B4 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		06A735D6159395C8001D42B4 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735D5159395C8001D42B4 /* Networking.m */; };
 		06A735E61593A465001D42B4 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735E51593A465001D42B4 /* NSString+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06A735F61593BF9B001D42B4 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735F51593BF9B001D42B4 /* GameViewController.m */; };
+		06A735FA1593C534001D42B4 /* RidleCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735F91593C534001D42B4 /* RidleCameraViewController.m */; };
+		06A735FD1593D028001D42B4 /* questionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A735FC1593D028001D42B4 /* questionViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A132F8F615939412000D87A3 /* myViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A132F8F515939412000D87A3 /* myViewController.m */; };
 		A17A33401593B546001D0E5D /* leaderbords.m in Sources */ = {isa = PBXBuildFile; fileRef = A17A333F1593B546001D0E5D /* leaderbords.m */; };
+		A1C36BD91593BA4A00B6C280 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C36BD61593BA4A00B6C280 /* Networking.m */; };
+		A1C36BDA1593BA4A00B6C280 /* UserAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C36BD81593BA4A00B6C280 /* UserAuthentication.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,14 +70,22 @@
 		06A735BE15938AB9001D42B4 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		06A735BF15938AB9001D42B4 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		06A735C015938AB9001D42B4 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		06A735D4159395C8001D42B4 /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
-		06A735D5159395C8001D42B4 /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
 		06A735E41593A465001D42B4 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
 		06A735E51593A465001D42B4 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		06A735F41593BF9B001D42B4 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		06A735F51593BF9B001D42B4 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		06A735F81593C534001D42B4 /* RidleCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RidleCameraViewController.h; sourceTree = "<group>"; };
+		06A735F91593C534001D42B4 /* RidleCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RidleCameraViewController.m; sourceTree = "<group>"; };
+		06A735FB1593D027001D42B4 /* questionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = questionViewController.h; sourceTree = "<group>"; };
+		06A735FC1593D028001D42B4 /* questionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = questionViewController.m; sourceTree = "<group>"; };
 		A132F8F415939412000D87A3 /* myViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myViewController.h; sourceTree = "<group>"; };
 		A132F8F515939412000D87A3 /* myViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myViewController.m; sourceTree = "<group>"; };
 		A17A333E1593B546001D0E5D /* leaderbords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leaderbords.h; sourceTree = "<group>"; };
 		A17A333F1593B546001D0E5D /* leaderbords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leaderbords.m; sourceTree = "<group>"; };
+		A1C36BD51593BA4A00B6C280 /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		A1C36BD61593BA4A00B6C280 /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
+		A1C36BD71593BA4A00B6C280 /* UserAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAuthentication.h; sourceTree = "<group>"; };
+		A1C36BD81593BA4A00B6C280 /* UserAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAuthentication.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,12 +136,18 @@
 				06A7359D159389A6001D42B4 /* HackKRKAppDelegate.h */,
 				06A7359E159389A6001D42B4 /* HackKRKAppDelegate.m */,
 				06A735A0159389A6001D42B4 /* MainStoryboard.storyboard */,
+				06A735FB1593D027001D42B4 /* questionViewController.h */,
+				06A735FC1593D028001D42B4 /* questionViewController.m */,
 				06A735A3159389A6001D42B4 /* HackKRKViewController.h */,
 				06A735A4159389A6001D42B4 /* HackKRKViewController.m */,
+				06A735F81593C534001D42B4 /* RidleCameraViewController.h */,
+				06A735F91593C534001D42B4 /* RidleCameraViewController.m */,
 				A132F8F415939412000D87A3 /* myViewController.h */,
 				A132F8F515939412000D87A3 /* myViewController.m */,
 				A17A333E1593B546001D0E5D /* leaderbords.h */,
 				A17A333F1593B546001D0E5D /* leaderbords.m */,
+				06A735F41593BF9B001D42B4 /* GameViewController.h */,
+				06A735F51593BF9B001D42B4 /* GameViewController.m */,
 				06A73595159389A6001D42B4 /* Supporting Files */,
 			);
 			path = HackKrk6;
@@ -180,8 +198,10 @@
 		06A735E81593ADFC001D42B4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				06A735D4159395C8001D42B4 /* Networking.h */,
-				06A735D5159395C8001D42B4 /* Networking.m */,
+				A1C36BD51593BA4A00B6C280 /* Networking.h */,
+				A1C36BD61593BA4A00B6C280 /* Networking.m */,
+				A1C36BD71593BA4A00B6C280 /* UserAuthentication.h */,
+				A1C36BD81593BA4A00B6C280 /* UserAuthentication.m */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -263,9 +283,13 @@
 				06A735C915938AB9001D42B4 /* AFXMLRequestOperation.m in Sources */,
 				06A735CA15938AB9001D42B4 /* UIImageView+AFNetworking.m in Sources */,
 				A132F8F615939412000D87A3 /* myViewController.m in Sources */,
-				06A735D6159395C8001D42B4 /* Networking.m in Sources */,
 				06A735E61593A465001D42B4 /* NSString+Base64.m in Sources */,
 				A17A33401593B546001D0E5D /* leaderbords.m in Sources */,
+				A1C36BD91593BA4A00B6C280 /* Networking.m in Sources */,
+				A1C36BDA1593BA4A00B6C280 /* UserAuthentication.m in Sources */,
+				06A735F61593BF9B001D42B4 /* GameViewController.m in Sources */,
+				06A735FA1593C534001D42B4 /* RidleCameraViewController.m in Sources */,
+				06A735FD1593D028001D42B4 /* questionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

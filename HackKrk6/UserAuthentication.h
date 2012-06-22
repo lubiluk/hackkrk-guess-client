@@ -11,6 +11,7 @@
 @interface UserAuthentication : NSObject
 @property (nonatomic,strong) NSString *username;
 @property (nonatomic,strong) NSString *token;
+@property (nonatomic,assign) NSInteger score;
 
 + (UserAuthentication *)sharedAuthentication;
 @end

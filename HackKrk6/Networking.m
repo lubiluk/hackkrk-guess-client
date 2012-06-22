@@ -7,6 +7,7 @@
 //
 
 #import "Networking.h"
+#import "AFJSONUtilities.h"
 #import "NSString+Base64.h"
 
 @interface Networking ()
@@ -29,7 +30,8 @@
 - (id)init
 {
     if (self = [super init]) {
-        self.url = [NSURL URLWithString:@"http://hackkrk-guess-static.herokuapp.com"];
+        self.httpQueue = [[NSOperationQueue alloc] init];
+        self.url = [NSURL URLWithString:@"http://hackkrk-guess.herokuapp.com"];
     }
     return self;
 }
@@ -43,17 +45,24 @@
                             username, @"username",
                             password, @"password",
                             nil];
+
     
-    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:@"/user" parameters:params];
-    
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:@"/user" parameters:nil];
+    NSData *jsonData = AFJSONEncode(params, nil);
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:jsonData];
     
     AFJSONRequestOperation *json = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        
         result(YES,nil,JSON);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        
         result(NO,error,JSON);
     }];
     
     [self.httpQueue addOperation:json];
+    
+    
 }
 
 - (void)sendLoginRequestWithUsername:(NSString *)username password:(NSString *)password withCallBack:(void (^)(BOOL result, NSError *error, id JSON))result
@@ -93,7 +102,10 @@
                             base64Image, @"photo",
                             nil];
     
-    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:@"/riddles" parameters:params];
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:@"/riddles" parameters:nil];
+    NSData *jsonData = AFJSONEncode(params, nil);
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:jsonData];
 
     AFJSONRequestOperation *json = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         result(YES,nil,JSON);
@@ -108,19 +120,24 @@
 {
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:self.url];
     [httpClient setDefaultHeader:@"X-Auth-Token" value:token];
+//    [httpClient setDefaultHeader:@"Content-Type" value:@"application/json"];
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
                             pageNumber, @"page",
-                            itemsPerPage, @"per_page",
+                            [NSNumber numberWithInt:10], @"per_page",
                             nil];
     
     NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET" path:@"/riddles" parameters:params];
-    
+//    NSData *jsonData = AFJSONEncode(params, nil);
+//    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+//    [request setHTTPBody:jsonData];
     
     
     AFJSONRequestOperation *json = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        NSLog(@"JSON: %@",JSON);
         result(YES,nil,JSON);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+         NSLog(@"ERR: %@",error);
         result(NO,error,JSON);
     }];
     
@@ -136,7 +153,11 @@
                             answer, @"answer",
                             nil];
     
-    NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET" path:[NSString stringWithFormat:@"/riddles/%@/answer",riddleID] parameters:params];
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET" path:[NSString stringWithFormat:@"/riddles/%@/answer",riddleID] parameters:nil];
+    NSData *jsonData = AFJSONEncode(params, nil);
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:jsonData];
+    
     
     AFJSONRequestOperation *json = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         result(YES,nil,JSON);
@@ -157,8 +178,10 @@
                             itemsPerPage, @"per_page",
                             nil];
     
-    NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET" path:@"/leaderboard" parameters:params];
-    
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET" path:@"/leaderboard" parameters:nil];
+    NSData *jsonData = AFJSONEncode(params, nil);
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:jsonData];
     
     
     AFJSONRequestOperation *json = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
